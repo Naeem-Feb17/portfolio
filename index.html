@@ -15,42 +15,403 @@
 
         <a href="#" class="logo">Naeem</a>
 
-        <div class="hamburger">
-            <i class="fas fa-bars"></i>
-        </div>
-
         <nav>
-            <a href="#" class="active">Home</a>
-            <a href="#">Services</a>
-            <a href="#">Skills</a>
-            <a href="#">Education</a>
-            <a href="#">Experience</a>
-            <a href="#">Contact</a>
+            <a href="#home" class="active">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
         </nav>
-        
+
+        <div class="header-controls">
+            <div class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
     </header>
 
-
-    <section class="home">
+    <section class="home" id="home">
         <div class="home-img">
             <img src="main.jpg" alt="">
         </div>
         <div class="home-content">
             <h1>Hi, It's <span>Naeem</span></h1>
             <h3 class="typing-text">I'm a <span id="typing"></span></h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Minus labore dolores esse. Odit similique doloribus tenetur doloremque,
-                sunt commodi in ipsa repudiandae debitis deleniti blanditiis quibusdam quaerat neque asperiores ea.</p>
+            <p><span style="font-weight: bold;">Namaste!</span><br>
+                I am a keen learner with a passion for software engineering, such as full stack development,
+                programming, and databases. <br>I am discovering my niche in this rapidly developing technology world.
+                This portfolio represents my learning — my projects, my skills, and my progress. It contains necessary
+                information for a clearer perspective of my journey.
+                <br>I'm looking forward to expanding and evolving with projects of substance in collaboration.
+            </p>
             <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/naeemfeb17/" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Naeem-Feb17" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/mohd_._naeem/" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
             </div>
-            <a href="#" class="btn">Hire me</a>
+            <div class="action-buttons">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mdnaeem824.mn@gmail.com&su=Hiring%20Inquiry&body=Hi%20Naeem,%0A%0AI'm%20interested%20in%20discussing%20a%20potential%20opportunity%20with%20you.%0A%0ABest%20regards"
+                    class="btn" id="hire-btn" target="_blank">Hire me</a>
+                <a href="resume.pdf" class="btn resume-btn" target="_blank" download="Naeem_Resume.pdf">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+            </div>
         </div>
     </section>
 
+    <section class="projects" id="projects">
+        <h1 class="heading">My <span>Projects</span></h1>
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/400x250/333/fff?text=E-Commerce+Website"
+                        alt="E-Commerce Project">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>E-Commerce Website</h3>
+                    <p>A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user
+                        authentication, shopping cart, and payment integration.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Express</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/400x250/333/fff?text=Task+Manager+App"
+                        alt="Task Manager Project">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Task Manager Application</h3>
+                    <p>A productivity app with drag-and-drop functionality, real-time updates, and team collaboration
+                        features. Built with modern web technologies.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">HTML/CSS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/400x250/333/fff?text=Weather+Dashboard"
+                        alt="Weather Dashboard Project">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Weather Dashboard</h3>
+                    <p>Interactive weather application with location-based forecasts, charts, and historical data
+                        visualization using external APIs.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">API Integration</span>
+                        <span class="tech-tag">Chart.js</span>
+                        <span class="tech-tag">CSS3</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/400x250/333/fff?text=Portfolio+Website"
+                        alt="Portfolio Project">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Personal Portfolio</h3>
+                    <p>Responsive portfolio website showcasing my projects and skills. Features smooth animations,
+                        modern design, and interactive elements.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Responsive</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/400x250/333/fff?text=Data+Analytics+Tool"
+                        alt="Data Analytics Project">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Data Analytics Dashboard</h3>
+                    <p>Comprehensive data visualization tool for business intelligence with real-time charts, filters,
+                        and export functionality.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">D3.js</span>
+                        <span class="tech-tag">Django</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/400x250/333/fff?text=Social+Media+App"
+                        alt="Social Media Project">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Social Media Platform</h3>
+                    <p>Full-featured social networking application with real-time messaging, posts, likes, and user
+                        profiles. Scalable architecture design.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Socket.io</span>
+                        <span class="tech-tag">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h1 class="heading">My <span>Skills</span></h1>
+        <div class="skills-container">
+            <div class="skill">
+                <h3>HTML</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%;">90%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>CSS</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;">80%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 70%;">70%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>React</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 75%;">75%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>Python</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%;">85%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>Node.js</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 70%;">70%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>SQL</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;">80%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>MongoDB</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 65%;">65%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>GitHub</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%;">90%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <h1 class="heading">My <span>Education</span></h1>
+        <div class="education-container">
+            <div class="education-item">
+                <div class="education-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="education-content">
+                    <h3>Bachelor's Degree in Computer Science</h3>
+                    <h4>Andhra University, Visakhapatnam</h4>
+                    <p class="education-duration">2020 - 2024</p>
+                    <p class="education-description">Completed comprehensive coursework in software engineering, data
+                        structures, algorithms, database management, and web technologies. Maintained strong academic
+                        performance with focus on practical programming skills.</p>
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="education-content">
+                    <h3>Full Stack Web Development Certification</h3>
+                    <h4>Online Learning Platform</h4>
+                    <p class="education-duration">2023 - 2024</p>
+                    <p class="education-description">Intensive program covering modern web technologies including React,
+                        Node.js, MongoDB, and responsive design. Completed multiple real-world projects and gained
+                        hands-on experience with industry-standard tools.</p>
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-icon">
+                    <i class="fas fa-school"></i>
+                </div>
+                <div class="education-content">
+                    <h3>Higher Secondary Education (12th Grade)</h3>
+                    <h4>Intermediate College, Visakhapatnam</h4>
+                    <p class="education-duration">2018 - 2020</p>
+                    <p class="education-description">Mathematics, Physics, and Chemistry (MPC) stream with focus on
+                        analytical thinking and problem-solving skills that laid the foundation for programming and
+                        logical reasoning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience" id="experience">
+        <h1 class="heading">My <span>Experience</span></h1>
+        <div class="experience-container">
+            <div class="experience-item">
+                <h3>Freelance Web Developer</h3>
+                <p>June 2025 - Present</p>
+                <p>Helping friends and family members create portfolio websites and assisting my father with his e-commerce website development. Providing web development solutions and digital presence enhancement.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Process Executive</h3>
+                <h4>Patra Corporation – Visakhapatnam</h4>
+                <p>May 2022 - June 2023</p>
+                <ul>
+                    <li>Delivered customer support via email, resolving client queries efficiently and ensuring satisfaction.</li>
+                    <li>Managed and maintained client data with accuracy and confidentiality.</li>
+                    <li>Coordinated with internal teams to streamline workflows and enhance service quality.</li>
+                    <li>Documented client interactions and followed SOPs for ticketing and issue tracking.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h1 class="heading">Contact <span>Me</span></h1>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Get In Touch</h2>
+                <p>I'm always open to discussing new opportunities, collaborating on exciting projects, or just having a
+                    chat about technology!</p>
+
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>mdnaeem824.mn@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-text">
+                            <h3>Phone</h3>
+                            <p>+91 9553887867</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-text">
+                            <h3>Location</h3>
+                            <p>Visakhapatnam, Andhra Pradesh, India</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="contact-text">
+                            <h3>Response Time</h3>
+                            <p>Within 24 hours</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/naeemfeb17/" target="_blank" class="social-link"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Naeem-Feb17" target="_blank" class="social-link"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/mohd_._naeem/" target="_blank" class="social-link"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <div class="direct-contact">
+                    <h2>Ready to Connect?</h2>
+                    <p>Click the button below to send me an email directly</p>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mdnaeem824.mn@gmail.com&su=Hello%20Naeem&body=Hi%20Naeem,%0A%0AI'd%20like%20to%20get%20in%20touch%20with%20you.%0A%0ABest%20regards"
+                       class="btn direct-email-btn" target="_blank">
+                        <i class="fas fa-envelope"></i> Email Me Directly
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Naeem. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 
