@@ -280,14 +280,6 @@ section {
   z-index: 2;
 }
 
-.home-img {
-  border-radius: 50%;
-  flex-shrink: 0;
-  display: flex;
-  align-4items: center;
- justify-content: center;
-}
-
 .home-content {
   flex: 1;
   max-width: 50rem;
@@ -390,8 +382,8 @@ span {
 }
 
 .home-img img:hover {
-  font-size: 1.8rem;
-  font-weight: 500;
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(183, 75, 75, 0.8);
 }
 
 .social-icons a {
@@ -437,7 +429,7 @@ span {
 }
 
 .btn-primary:hover {
-  transform: scale3d(1.05);
+  transform: scale(1.05);
   background-color: var(--accent-light);
   border-color: var(--accent-light);
   box-shadow: 0 0 20px var(--accent-light);
@@ -454,7 +446,7 @@ span {
   border-color: var(--accent-color);
   color: white;
   box-shadow: 0 0 20px var(--accent-color);
-  transform: scale3d(1.05);
+  transform: scale(1.05);
 }
 
 .btn-tertiary {
@@ -469,11 +461,11 @@ span {
   border-color: var(--accent-color);
   color: white;
   box-shadow: 0 0 20px var(--accent-color);
-  transform: scale3d(1.05);
+  transform: scale(1.05);
 }
 
 .btn:hover {
-  transform: scale3d(1.05);
+  transform: scale(1.05);
 }
 
 .action-buttons {
@@ -534,9 +526,7 @@ span {
 /* ============================================
    PROJECTS SECTION
    ============================================ */
-}
 
-/* Projects Section */
 .projects {
   background: linear-gradient(
     135deg,
@@ -767,9 +757,6 @@ span {
   );
   animation: shimmer 2s infinite;
 }
-============================================
-   EDUCATION SECTION
-   ============================================ */
 
 @keyframes shimmer {
   0% {
@@ -780,7 +767,10 @@ span {
   }
 }
 
-/* Education Section */
+/* ============================================
+   EDUCATION SECTION
+   ============================================ */
+
 .education {
   background: linear-gradient(
     135deg,
@@ -1438,7 +1428,7 @@ span {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;Styles 
+  flex-shrink: 0;
   z-index: 10;
 }
 
