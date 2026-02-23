@@ -268,7 +268,7 @@ section {
   flex-shrink: 0;
   display: flex;
   align-4items: center;
- 4 justify-content: center;
+ justify-content: center;
 }
 
 .home-content {
