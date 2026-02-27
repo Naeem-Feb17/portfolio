@@ -52,43 +52,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Typing animation functionality
   const typingElement = document.getElementById("typing");
-  const words = ["Frontend Developer | MERN Stack Learner"];
+  const words = ["Frontend Developer | React & Node.js"];
   let wordIndex = 0;
   let letterIndex = 0;
   let currentWord = "";
   let currentLetters = "";
-  let isDeleting = false;
 
   function type() {
-    if (isDeleting) {
-      currentLetters = currentWord.substring(0, letterIndex - 1);
-      letterIndex--;
-    } else {
-      currentLetters = currentWord.substring(0, letterIndex + 1);
-      letterIndex++;
-    }
+    currentLetters = currentWord.substring(0, letterIndex + 1);
+    letterIndex++;
 
     typingElement.innerHTML = currentLetters;
 
-    let typeSpeed = 100;
-    if (isDeleting) {
-      typeSpeed /= 2;
+    if (letterIndex === currentWord.length) {
+      // Typing done — remove blinking cursor
+      typingElement.style.borderRight = "none";
+      typingElement.style.paddingRight = "0";
+      return;
     }
 
-    if (!isDeleting && letterIndex === currentWord.length) {
-      typeSpeed = 1500;
-      isDeleting = true;
-    } else if (isDeleting && letterIndex === 0) {
-      isDeleting = false;
-      wordIndex++;
-      if (wordIndex === words.length) {
-        wordIndex = 0;
-      }
-      currentWord = words[wordIndex];
-      typeSpeed = 300;
-    }
-
-    setTimeout(type, typeSpeed);
+    setTimeout(type, 80);
   }
 
   currentWord = words[wordIndex];
@@ -264,28 +247,61 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 3000);
   }
 
-  // Add subtle animations to sections on scroll
+  // Rich scroll-reveal animation system
   function addScrollAnimations() {
-    const sections = document.querySelectorAll("section");
+    // Map selectors → animation type (and optional stagger)
+    const animationMap = [
+      { selector: ".home-img", cls: "reveal-left" },
+      { selector: ".home-content", cls: "reveal-right" },
+      { selector: ".heading", cls: "reveal" },
+      { selector: ".additional-skills-heading", cls: "reveal" },
+      { selector: ".project-card", cls: "reveal", stagger: true },
+      { selector: ".skill-card", cls: "reveal-scale", stagger: true },
+      { selector: ".education-item", cls: "reveal-left", stagger: true },
+      { selector: ".experience-item:nth-child(odd)", cls: "reveal-left" },
+      { selector: ".experience-item:nth-child(even)", cls: "reveal-right" },
+      { selector: ".contact-info", cls: "reveal-left" },
+      { selector: ".contact-form-container", cls: "reveal-right" },
+      { selector: ".contact-item", cls: "reveal", stagger: true },
+      { selector: ".contact-text", cls: "reveal" },
+      { selector: ".social-link", cls: "reveal-scale", stagger: true },
+      { selector: ".certificate-divider", cls: "reveal-scale" },
+      { selector: "footer", cls: "reveal" },
+    ];
+
+    const allAnimated = [];
+
+    animationMap.forEach(({ selector, cls, stagger }) => {
+      document.querySelectorAll(selector).forEach((el, i) => {
+        // Don't double-assign
+        if (
+          !el.classList.contains("reveal") &&
+          !el.classList.contains("reveal-left") &&
+          !el.classList.contains("reveal-right") &&
+          !el.classList.contains("reveal-scale")
+        ) {
+          el.classList.add(cls);
+          if (stagger) {
+            el.style.transitionDelay = `${i * 0.1}s`;
+          }
+          allAnimated.push(el);
+        }
+      });
+    });
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
     );
 
-    sections.forEach((section) => {
-      section.style.opacity = "0";
-      section.style.transform = "translateY(20px)";
-      section.style.transition = "all 0.6s ease";
-      observer.observe(section);
-    });
+    allAnimated.forEach((el) => observer.observe(el));
   }
 
   addScrollAnimations();
@@ -301,7 +317,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Hi Naeem,\n\nI'm interested in discussing a potential opportunity with you.\n\nBest regards";
 
       const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(
-        subject
+        subject,
       )}&body=${encodeURIComponent(body)}`;
 
       // Try to open with window.location
