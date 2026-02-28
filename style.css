@@ -687,15 +687,10 @@ span {
 
 .project-info p {
   font-size: 1.5rem;
-  color: var(--text-secondary);
+  color: var(--text-color);
   line-height: 1.6;
   margin-bottom: 2rem;
   flex: 1;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .project-buttons {
