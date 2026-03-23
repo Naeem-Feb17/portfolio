@@ -843,6 +843,12 @@ span {
   border: 1px solid rgba(33, 150, 243, 0.3);
 }
 
+.skill-level.Beginner {
+  background: rgba(244, 67, 54, 0.15);
+  color: #f44336;
+  border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
 .additional-skills {
   max-width: 100rem;
   margin: 4rem auto 0;
@@ -857,9 +863,11 @@ span {
 }
 
 .additional-skills-grid {
-  grid-template-columns: repeat(3, 1fr) !important;
-  max-width: 33rem !important;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  max-width: 100%;
+  margin: 0;
 }
 
 .skill-circle-wrapper {
