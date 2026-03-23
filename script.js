@@ -114,6 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  
   // Scroll event listener for active nav
   window.addEventListener("scroll", updateActiveNav);
 
